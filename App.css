@@ -1,0 +1,156 @@
+/* Global reset and default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main app container */
+.App {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 420px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.App:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Input area and buttons */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input {
+  padding: 12px 15px;
+  width: 270px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #388e3c;
+}
+
+/* Notes list styling */
+.notes-list {
+  margin-top: 30px;
+}
+
+.notes-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.notes-list li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.notes-list li span {
+  flex: 1;
+}
+
+.notes-list button {
+  background-color: #f44336;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.notes-list button:hover {
+  background-color: #e53935;
+}
+
+.notes-list .edit-btn {
+  background-color: #ffa000;
+}
+
+.notes-list .edit-btn:hover {
+  background-color: #ff8f00;
+}
+
+/* Add note button inside list */
+.notes-list li .edit-btn,
+.notes-list li button {
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 480px) {
+  .App {
+    width: 100%;
+    padding: 25px;
+  }
+
+  input {
+    width: 220px;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+
+  .notes-list li {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
